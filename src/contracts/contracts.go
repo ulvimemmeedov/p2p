@@ -1,7 +1,12 @@
 package contracts
 
-// import ""
+import (
+	"fmt"
 
-func GenerateContract() {
+	"github.com/ulvimemmeedov/p2p/client"
+)
 
+func GenerateContract(sender, recevier string) {
+	client.FindClientContractAdress("dsdd")
+	fmt.Println("dsds")
 }

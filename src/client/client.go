@@ -1,12 +1,10 @@
 package client
 
 import (
-	"crypto/sha1"
 	"math/rand"
-	"strconv"
-)
 
-var character string = "qwertyuikasdnhshbdsjadbjhasndjnaskdasdandaksdsddknasdkasdkaskndaskdadkasnkdknaksnd"
+	"github.com/ulvimemmeedov/p2p/tools"
+)
 
 type Client struct {
 	ID             int
@@ -14,16 +12,20 @@ type Client struct {
 	ContractAdress []byte
 	Balance        float64
 	Contracts      []string
+	Password       string
 }
 
-func NewUser(Username string) Client {
-	h := sha1.New()
+func FindClientContractAdress(adress string) string {
+	return adress
+}
+func NewUser(Username, Password string) Client {
 	u := Client{}
+	hash := tools.HashPassword(Password)
 	u.ID = rand.Intn(99) * 9999
-	u.Username = character + Username + character + strconv.Itoa(u.ID)
-	h.Write([]byte(Username))
-	bs := h.Sum(nil)
+	u.Username = Username
+	bs := tools.GenerateRandomBytes(Username, hash, u.ID)
 	u.ContractAdress = bs
 	u.Balance = 0
+	u.Password = hash
 	return u
 }
