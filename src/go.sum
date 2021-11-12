@@ -1,2 +1,2 @@
-golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 h1:7I4JAnoQBe7ZtJcBaYHi5UtiO8tQHbUSXxL+pnGRANg=
-golang.org/x/crypto v0.0.0-20210921155107-089bfa567519/go.mod h1:GvvjBRRGRdwPK5ydBHafDWAxML/pGHZbMvKqRZ5+Abc=
+github.com/lucasmenendez/gop2p v1.0.4 h1:EZUJMKfuJl5q6QIJibu3cdJiYAO7ZjuwFS0JoiPT6t8=
+github.com/lucasmenendez/gop2p v1.0.4/go.mod h1:yezU8CLYh6sP0OWpU2y4hF4hLs1Slt4xZIkwbw3D8zo=
